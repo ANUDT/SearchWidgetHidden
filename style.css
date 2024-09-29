@@ -4,63 +4,62 @@
     box-sizing: border-box;
 }
 
-body{
-   
-    font-family:'Roboto', sans-serif;
-        display: flex;
-        margin: 0;
-        align-items: center;
-        position: center;
-         justify-content: center; 
-        height: 100vh;
-        position: relative;
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .full-page-image {
     background-image: url('./image/flowers.jpeg'); /* Replace with your image URL */
     background-size: cover; /* Scale the image to cover the entire div */
     background-position: center; /* Center the image */
-     width: 100vw; /* Full viewport width */
-     height: 100vh;
-     position: relative; /* Set position to relative */
+    width: 100vw; /* Full viewport width */
+    height: 100vh;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 .search {
-    display: flex; /* Use flexbox for centering the input and button */
+    display: flex; /* Use flexbox for input and button */
     align-items: center; /* Center items vertically */
-  
-    }
-
-    .search .input{
-      background-color:#fff ; 
-      border-color: blue; 
-      font-size: 20px;
-      padding: 20px;
-      height:50px;
-      width:50px ;
-      transition: width 0.3s ease;
-    }
-
-    .btn{
-        background-color: #fff;
-        border: 0;
-        cursor: pointer;
-        font-size: 24px;
-        top: 0;
-        left:0;
-        height: 50px;
-        width: 50px;
-        transition: transform 0.3s ease;
-    }
-
-    .btn:focus,
-    .input:focus{
-        outline: none;
-    }
-.search.active .input{
-    width: 200px;
+    
 }
 
-.search.active .btn{
+.input {
+    background-color: #fff; 
+    border: 2px solid blue; /* Border style */
+    font-size: 20px;
+    padding: 10px; /* Adjust padding */
+    height: 50px;
+    width: 50px; /* Initial width */
+    transition: width 0.3s ease;
+}
+
+.btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px; /* Adjust input width on active */
+}
+
+.search.active .btn {
     transform: translateX(198px);
 }
